@@ -1,0 +1,34 @@
+name: Agent Health Check
+
+on:
+  push:
+    branches: [main]
+    paths: ["AGENTS.md", "HEARTBEAT.md"]
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check AGENTS.md
+        run: |
+          echo "=== Agent Count ==="
+          grep -c "^## " AGENTS.md
+          echo "=== Agents ==="
+          grep "^## " AGENTS.md
+          echo "=== Models ==="
+          grep "Modell:" AGENTS.md
+          echo "=== Providers ==="
+          grep "Provider:" AGENTS.md | sort | uniq -c
+
+      - name: Validate Skills Count
+        run: |
+          SKILLS=$(grep -c "^    [0-9]" AGENTS.md || true)
+          echo "Total skill assignments: $SKILLS"
+          if [ "$SKILLS" -lt 70 ]; then
+            echo "::warning::Skill count below 70\!"
+          fi
