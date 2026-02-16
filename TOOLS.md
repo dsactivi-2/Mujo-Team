@@ -1,40 +1,33 @@
-# TOOLS.md - Local Notes
+# TOOLS.md — Lokale Konfiguration
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+Deine Setup-spezifischen Einstellungen. Skills sind shared, das hier ist privat.
 
-## What Goes Here
+## SSH
+- OpenClaw → Hetzner CPX41 (46.225.139.14), Tailscale: 100.106.195.81
 
-Things like:
+## Provider-Endpoints
+- Anthropic: api.anthropic.com (direkt, kein Proxy)
+- xAI: api.x.ai (direkt, kein Proxy)
+- Venice: api.venice.ai (nur Controller-Agent)
+- OpenAI: api.openai.com (nur Embeddings fuer Memory Search)
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+## Gateway
+- Lokal: ws://100.106.195.81:18789
+- Version: v2026.2.14
 
-## Examples
+## TTS (ElevenLabs)
+- Bevorzugte Stimme: _noch nicht konfiguriert_
+- Default Speaker: _noch nicht konfiguriert_
 
-```markdown
-### Cameras
+## Devices
+- Mac: _Hostname eintragen_
+- iPhone: _via openclaw-iphone-setup.txt in docs/_
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
+## Wichtige Pfade
+- Workspace: ~/.openclaw/workspace/
+- Skills: ~/.openclaw/workspace/skills/
+- Memory: ~/.openclaw/workspace/memory/
+- Config: ~/.openclaw/workspace/config/
 
 ---
-
-Add whatever helps you do your job. This is your cheat sheet.
+Platzhalter mit _ markiert → spaeter mit echten Werten ersetzen.
