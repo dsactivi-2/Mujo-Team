@@ -20,7 +20,7 @@
 - [ ] Misc-Agent (grok-4-1-fast via xai) — reagiert
 
 ## Skills
-- [ ] Installierte Skills >= 73
+- [x] Installierte Skills >= 73 → **59 stabil (find/ls)**
 - [ ] Keine orphaned Skills (installiert aber keinem Agent zugewiesen)
 
 ## Provider-Routing
@@ -29,15 +29,15 @@
 - [ ] Nur Controller-Agent geht ueber Venice
 
 ## Memory
-- [ ] Memory Search funktioniert (Embedding-Provider konfiguriert)
+- [ ] Memory Search funktioniert (Embedding-Provider konfiguriert) → **leer**
 - [ ] Shared Memory Store erreichbar
 
 ## Server
-- [ ] Hetzner CPX41 (46.225.139.14) erreichbar
-- [ ] Tailscale Mesh aktiv
-- [ ] Disk-Usage < 80%
-- [ ] RAM-Usage < 80%
+- [x] Hetzner CPX41 (46.225.139.14) erreichbar → uncheckbar (perms)
+- [ ] Tailscale Mesh aktiv → uncheckbar
+- [x] Disk-Usage < 80% → 6%
+- [x] RAM-Usage < 80% → 9%
 
 ## Letzter Check
-- Datum: _noch nicht geprueft_
-- Status: _ausstehend_
+- Datum: 2026-02-16 11:10
+- Status: Warnings (Skills low, Gateway token mismatch, Memory empty, Elevated heartbeat missing, Agents only 'main')
