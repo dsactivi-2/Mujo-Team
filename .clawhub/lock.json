@@ -240,6 +240,162 @@
     "clawdbot-security-check": {
       "version": "2.2.2",
       "installedAt": 1771032053796
+    },
+    "agent-development": {
+      "version": "0.1.0",
+      "installedAt": 1771246740771
+    },
+    "ai-persona-os": {
+      "version": "1.4.1",
+      "installedAt": 1771246746433
+    },
+    "api-gateway": {
+      "version": "1.0.31",
+      "installedAt": 1771246755202
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1771246758647
+    },
+    "free-ride": {
+      "version": "1.0.3",
+      "installedAt": 1771246803907
+    },
+    "github-api": {
+      "version": "1.0.3",
+      "installedAt": 1771246807348
+    },
+    "google-analytics": {
+      "version": "1.0.10",
+      "installedAt": 1771246811234
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1771246861750
+    },
+    "elevenlabs-voices": {
+      "version": "2.1.5",
+      "installedAt": 1771246867529
+    },
+    "fathom-api": {
+      "version": "1.0.5",
+      "installedAt": 1771246872955
+    },
+    "mcporter": {
+      "version": "1.0.0",
+      "installedAt": 1771246924180
+    },
+    "memory-manager": {
+      "version": "1.0.0",
+      "installedAt": 1771246930460
+    },
+    "clickup-api": {
+      "version": "1.0.3",
+      "installedAt": 1771246982192
+    },
+    "google-meet": {
+      "version": "1.0.4",
+      "installedAt": 1771246988673
+    },
+    "agent-builder": {
+      "version": "1.0.0",
+      "installedAt": 1771247056809
+    },
+    "calendly-api": {
+      "version": "1.0.3",
+      "installedAt": 1771247065598
+    },
+    "mailchimp": {
+      "version": "1.0.3",
+      "installedAt": 1771247105175
+    },
+    "markdown-converter": {
+      "version": "1.0.0",
+      "installedAt": 1771247112535
+    },
+    "microsoft-excel": {
+      "version": "1.0.3",
+      "installedAt": 1771247120121
+    },
+    "n8n-workflow-automation": {
+      "version": "1.0.0",
+      "installedAt": 1771247220528
+    },
+    "notion-api-skill": {
+      "version": "1.0.5",
+      "installedAt": 1771247227957
+    },
+    "ontology": {
+      "version": "0.1.2",
+      "installedAt": 1771247235247
+    },
+    "moltguard": {
+      "version": "6.0.2",
+      "installedAt": 1771247348743
+    },
+    "outlook-api": {
+      "version": "1.0.3",
+      "installedAt": 1771247357034
+    },
+    "stripe-api": {
+      "version": "1.0.8",
+      "installedAt": 1771247400672
+    },
+    "superdesign": {
+      "version": "1.0.0",
+      "installedAt": 1771247409064
+    },
+    "whatsapp-business": {
+      "version": "1.0.3",
+      "installedAt": 1771247466148
+    },
+    "woocommerce": {
+      "version": "1.0.3",
+      "installedAt": 1771247474439
+    },
+    "youtube-api-skill": {
+      "version": "1.0.3",
+      "installedAt": 1771247482918
+    },
+    "claw-arena": {
+      "version": "1.0.0",
+      "installedAt": 1771247539909
+    },
+    "prompt-engineering-expert": {
+      "version": "1.0.0",
+      "installedAt": 1771247589701
+    },
+    "stock-market-pro": {
+      "version": "1.2.12",
+      "installedAt": 1771247599290
+    },
+    "test-runner": {
+      "version": "1.0.0",
+      "installedAt": 1771247609999
+    },
+    "typeform": {
+      "version": "1.0.4",
+      "installedAt": 1771247619441
+    },
+    "web-search-plus": {
+      "version": "2.7.2",
+      "installedAt": 1771247643282
+    },
+    "google-slides": {
+      "version": "1.0.3",
+      "installedAt": 1771248485486
+    },
+    "linear-api": {
+      "version": "1.0.3",
+      "installedAt": 1771248494799
+    },
+    "pipedrive-api": {
+      "version": "1.0.3",
+      "installedAt": 1771248504106
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1771248627415
     }
   }
 }

@@ -27,8 +27,12 @@ jobs:
 
       - name: Validate Skills Count
         run: |
-          SKILLS=$(grep -c "^    [0-9]" AGENTS.md || true)
-          echo "Total skill assignments: $SKILLS"
-          if [ "$SKILLS" -lt 70 ]; then
-            echo "::warning::Skill count below 70\!"
+          SKILLS=$(grep -cE '^\s+[0-9]+\.' AGENTS.md || true)
+          echo "Total skill assignments in AGENTS.md: $SKILLS"
+          UNIQUE=$(grep -oE '^\s+[0-9]+\.\s+\S+' AGENTS.md | awk '{print $2}' | sort -u | wc -l)
+          echo "Unique skills: $UNIQUE"
+          if [ "$UNIQUE" -lt 55 ]; then
+            echo "::warning::Unique skill count below 55!"
+          else
+            echo "Skills OK ($UNIQUE unique, $SKILLS total assignments)"
           fi
