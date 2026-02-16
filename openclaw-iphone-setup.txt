@@ -1,0 +1,24 @@
+OpenClaw iPhone Setup (a-Shell CLI)
+
+1. App Store CH: Suche "a-Shell" (ID 1481262205) → Install.
+
+2. a-Shell öffnen → Paste:
+npm i -g openclaw
+openclaw
+
+3. Termius Tunnel (optional):
+- Host: root@46.225.139.14
+- Local Port 18789 → Remote localhost:18789
+
+4. Safari: http://localhost:18789/ (Tunnel) oder http://mujo-server.tailscale:18789/
+
+5. Nodes Pair:
+openclaw nodes pairing → QR scan Dashboard.
+
+Test:
+openclaw nodes camera_snap front
+openclaw nodes run "open Settings"
+
+Docs: https://docs.openclaw.ai/tools/nodes
+
+🦾 Mujo

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mujo 🦾 - OpenClaw Web UI</title>
+  <style>
+    /* Retro-Futuristic Terminal Aesthetic: CRT glow, neon splits, tmux vibes */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inconsolata:wght@400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inconsolata', monospace;
+      background: #000;
+      color: #00ff41;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(0,255,65,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(0,200,255,0.1) 0%, transparent 50%),
+                  linear-gradient(45deg, #001100 0%, #000 100%);
+      animation: scanline 20s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes scanline { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
+    .crt-glow { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 20px #00ff41; }
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; height: 60px;
+      background: rgba(0,0,0,0.9); border-bottom: 2px solid #00ff41;
+      display: flex; align-items: center; padding: 0 20px; z-index: 10;
+      font-family: 'Orbitron', monospace; font-weight: 900; font-size: 1.5em;
+    }
+    .header h1 { @extend .crt-glow; margin-right: auto; }
+    .status { font-size: 0.8em; opacity: 0.8; }
+    .splits { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 100vh; padding: 70px 20px 20px; }
+    .pane {
+      background: rgba(0,20,0,0.8); border: 1px solid #00aa28; border-radius: 4px;
+      padding: 20px; overflow-y: auto; position: relative;
+      animation: pane-entry 0.5s ease-out;
+    }
+    @keyframes pane-entry { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .pane h2 { font-family: 'Orbitron', monospace; font-size: 1.2em; margin-bottom: 15px; @extend .crt-glow; }
+    .skill-list, .memory-log, .cron-jobs, .mcp-tools { list-style: none; }
+    .skill-item, .log-entry, .cron-job, .mcp-tool { 
+      background: rgba(0,255,65,0.1); margin-bottom: 10px; padding: 12px; border-left: 4px solid #00ff41;
+      border-radius: 0 4px 4px 0; transition: all 0.3s; cursor: pointer;
+    }
+    .skill-item:hover { background: rgba(0,255,65,0.2); transform: translateX(5px); box-shadow: 0 0 15px #00ff41; }
+    .log-entry time { color: #00ccff; font-size: 0.9em; }
+    .cron-job { border-left-color: #ffaa00; }
+    .cron-job:hover { box-shadow: 0 0 15px #ffaa00; }
+    .mcp-tool { border-left-color: #ff44ff; }
+    .mcp-tool:hover { box-shadow: 0 0 15px #ff44ff; }
+    .input-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; height: 50px;
+      background: rgba(0,0,0,0.95); border-top: 2px solid #00ff41; display: flex; align-items: center; padding: 0 20px;
+      z-index: 10;
+    }
+    input[type="text"] { flex: 1; background: rgba(0,20,0,0.8); border: 1px solid #00ff41; color: #00ff41; padding: 12px; font-family: inherit; font-size: 1em; }
+    input:focus { outline: none; box-shadow: 0 0 10px #00ff41; }
+    button { background: #00ff41; color: #000; border: none; padding: 12px 20px; margin-left: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s; }
+    button:hover { background: #00cc33; box-shadow: 0 0 15px #00ff41; transform: scale(1.05); }
+    .neon-line { position: absolute; height: 2px; background: linear-gradient(90deg, transparent, #00ff41, transparent); animation: neon-dash 2s linear infinite; }
+    @keyframes neon-dash { 0% { left: -100%; } 100% { left: 100%; } }
+    .output { margin-top: 10px; padding: 10px; background: rgba(0,100,0,0.5); border-radius: 4px; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="crt-glow">Mujo 🦾 OpenClaw Control</h1>
+    <div class="status">Skills: 46/49 | Memory: Forever | Uptime: Live | Tokens: 40%</div>
+  </div>
+  <div class="splits">
+    <div class="pane">
+      <h2 class="crt-glow">🛠️ Skills</h2>
+      <ul class="skill-list">
+        <li class="skill-item" onclick="runSkill('weather Berlin')">🌤️ weather Berlin</li>
+        <li class="skill-item" onclick="runSkill('github status')">🐙 github status</li>
+        <li class="skill-item" onclick="runSkill('sag Hallo')">🗣️ sag "Hallo"</li>
+        <li class="skill-item" onclick="runSkill('healthcheck')">📦 healthcheck</li>
+        <li class="skill-item" onclick="runSkill('cron list')">⏰ cron list</li>
+      </ul>
+    </div>
+    <div class="pane">
+      <h2 class="crt-glow">🧠 Memory</h2>
+      <div class="memory-log">
+        <div class="log-entry">2026-02-14: Forever-Memory aktiviert <time>[01:24]</time></div>
+        <div class="log-entry">Team1/Team2 Repos erstellt <time>[01:45]</time></div>
+        <div class="log-entry">User: Den-is, VPS Setup done <time>[01:20]</time></div>
+      </div>
+    </div>
+    <div class="pane">
+      <h2 class="crt-glow">⏰ Cron Jobs</h2>
+      <ul class="cron-jobs">
+        <li class="cron-job">Daily Security Audit (8Uhr)</li>
+        <li class="cron-job">Daily Update Check (9Uhr)</li>
+      </ul>
+    </div>
+    <div class="pane">
+      <h2 class="crt-glow">📦 MCP Tools</h2>
+      <ul class="mcp-tools">
+        <li class="mcp-tool" onclick="runMCP('shell.ls /workspace')">shell.ls</li>
+        <li class="mcp-tool" onclick="runMCP('github.issues.list')">github issues</li>
+        <li class="mcp-tool" onclick="runMCP('files.read IDENTITY.md')">files read</li>
+      </ul>
+    </div>
+  </div>
+  <div class="input-bar">
+    <input type="text" id="command" placeholder="Befehl eingeben: weather Berlin, github status, ls /root..." onkeypress="if(event.key==='Enter') runCommand()">
+    <button onclick="runCommand()">Ausführen</button>
+    <div class="output" id="output"></div>
+  </div>
+  <script>
+    function runSkill(cmd) { runCommand(cmd); }
+    function runMCP(cmd) { runCommand('mcporter call ' + cmd); }
+    function runCommand() {
+      const input = document.getElementById('command');
+      const cmd = input.value;
+      const output = document.getElementById('output');
+      output.textContent = `> ${cmd}\nExecuting...\n(Verbinde zu OpenClaw MCP/Exec für real Exec)\nResult: Simulated - Weather: ☁️ +1°C | Files: IDENTITY.md USER.md\n`;
+      input.value = '';
+      output.scrollTop = output.scrollHeight;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "skills": {
+    "1password": {
+      "version": "1.0.1",
+      "installedAt": 1771030472374
+    },
+    "apple-notes": {
+      "version": "1.0.0",
+      "installedAt": 1771030473558
+    },
+    "apple-reminders": {
+      "version": "1.0.0",
+      "installedAt": 1771030474899
+    },
+    "bear-notes": {
+      "version": "1.0.0",
+      "installedAt": 1771030476038
+    },
+    "blogwatcher": {
+      "version": "1.0.0",
+      "installedAt": 1771030477531
+    },
+    "blucli": {
+      "version": "1.0.0",
+      "installedAt": 1771030479097
+    },
+    "bluebubbles": {
+      "version": "1.0.0",
+      "installedAt": 1771030480491
+    },
+    "camsnap": {
+      "version": "1.0.0",
+      "installedAt": 1771030481877
+    },
+    "eightctl": {
+      "version": "1.0.0",
+      "installedAt": 1771030484385
+    },
+    "gemini": {
+      "version": "1.0.0",
+      "installedAt": 1771030485738
+    },
+    "gifgrep": {
+      "version": "1.0.1",
+      "installedAt": 1771030487291
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1771031320734
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1771030489651
+    },
+    "goplaces": {
+      "version": "1.0.0",
+      "installedAt": 1771030491501
+    },
+    "local-places": {
+      "version": "1.0.0",
+      "installedAt": 1771030502773
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1771030504092
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1771030505476
+    },
+    "himalaya": {
+      "version": "1.0.0",
+      "installedAt": 1771030524170
+    },
+    "imsg": {
+      "version": "1.0.0",
+      "installedAt": 1771030526526
+    },
+    "nano-pdf": {
+      "version": "1.0.0",
+      "installedAt": 1771030528683
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1771030530935
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1771030533306
+    },
+    "openhue": {
+      "version": "1.0.0",
+      "installedAt": 1771030535473
+    },
+    "ordercli": {
+      "version": "1.0.0",
+      "installedAt": 1771030537939
+    },
+    "peekaboo": {
+      "version": "1.0.0",
+      "installedAt": 1771030540267
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1771031319340
+    },
+    "session-logs": {
+      "version": "1.0.0",
+      "installedAt": 1771031354967
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1771030563312
+    },
+    "songsee": {
+      "version": "1.0.0",
+      "installedAt": 1771030565751
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1771030567952
+    },
+    "spotify-player": {
+      "version": "1.0.0",
+      "installedAt": 1771030570258
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1771030572469
+    },
+    "things-mac": {
+      "version": "1.0.0",
+      "installedAt": 1771030574840
+    },
+    "tmux": {
+      "version": "1.0.0",
+      "installedAt": 1771030577411
+    },
+    "trello": {
+      "version": "1.0.0",
+      "installedAt": 1771030579896
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1771030582405
+    },
+    "wacli": {
+      "version": "1.0.0",
+      "installedAt": 1771030586474
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1771031928586
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1771031932170
+    },
+    "self-improving-agent": {
+      "version": "1.0.5",
+      "installedAt": 1771031935063
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1771031941001
+    },
+    "clawdhub": {
+      "version": "1.0.0",
+      "installedAt": 1771031944499
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1771031956222
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1771031958398
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1771031961382
+    },
+    "clawddocs": {
+      "version": "1.2.2",
+      "installedAt": 1771031964074
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1771031985866
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1771031988378
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1771031990845
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1771031994401
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "installedAt": 1771032005883
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1771032008411
+    },
+    "qmd": {
+      "version": "1.0.0",
+      "installedAt": 1771032011798
+    },
+    "web-search": {
+      "version": "1.0.0",
+      "installedAt": 1771032014231
+    },
+    "clawdbot-filesystem": {
+      "version": "1.0.2",
+      "installedAt": 1771032016858
+    },
+    "stock-analysis": {
+      "version": "6.2.0",
+      "installedAt": 1771032020045
+    },
+    "caldav-calendar": {
+      "version": "1.0.1",
+      "installedAt": 1771032041700
+    },
+    "duckduckgo-search": {
+      "version": "1.0.0",
+      "installedAt": 1771032044853
+    },
+    "prompt-guard": {
+      "version": "3.1.0",
+      "installedAt": 1771032050064
+    },
+    "clawdbot-security-check": {
+      "version": "2.2.2",
+      "installedAt": 1771032053796
+    }
+  }
+}
